@@ -1,1 +1,1 @@
-export type Listener = (args)=>void;
+export type Listener = (args) => void;

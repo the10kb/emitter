@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/l42wyn1660xrfjin?svg=true)](https://ci.appveyor.com/project/pavel_shirobok/boilerplate)
+[![Build status](https://ci.appveyor.com/api/projects/status/43xf9ok1826c7vio/branch/master?svg=true)](https://ci.appveyor.com/project/pavel_shirobok/emitter/branch/master)
 
 Install
 -------
