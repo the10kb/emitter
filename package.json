@@ -1,6 +1,6 @@
 {
   "name": "@10kb/emitter",
-  "version": "0.0.20",
+  "version": "0.1.0",
   "description": "emitter project description",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
