@@ -47,6 +47,19 @@ describe("emitter/simple cases", () => {
         emitter.emit(42);
     });
 
+    it("should emit several parameters", (done)=>{
+        let emitter = new Emitter<number>();
+
+        emitter.on((t1, t2, t3)=>{
+            expect(t1).toBe(42);
+            expect(t2).toBe(43);
+            expect(t3).toBe(44);
+            done();
+        });
+
+        emitter.emit(42, 43, 44);
+    });
+
     it("should off all", ()=>{
         let emitter = new Emitter<number>();
 
@@ -90,15 +103,31 @@ describe("emitter/simple cases", () => {
                 c = t;
             }
         };
-        
+
         let ctx = {name : 43};
         emitter
             .on(c)
             .on(c, ctx);
 
-        emitter.off(ctx);
+        emitter.off(null, ctx);
         emitter.emit(42);
 
         expect(c).toBe(42);
+    });
+
+    it("should once", (done)=>{
+        let emitter = new Emitter<number>();
+
+        emitter
+            .once((t)=>{
+                if(t == 43){
+                    throw new Error()
+                } else {
+                    done();
+                }
+            });
+
+        emitter.emit(42);
+        emitter.emit(43);
     });
 });
