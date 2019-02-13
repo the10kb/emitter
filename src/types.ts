@@ -1,6 +1,6 @@
-export type Callback<T> = (o : T, ...args) => void;
+export type Callback<T> = (o: T, ...args) => void;
 
-export type InternalEmitterHandler<T> = {
+export interface InternalEmitterHandler<T> {
     cb   ?: Callback<T>;
     ctx  ?: any;
     once ?: boolean;

@@ -16,7 +16,7 @@
             "allow-null-check",
             "allow-undefined-check"
         ],
-
+        "only-arrow-functions": false,
         "no-shadowed-variable": false
     },
     "rulesDirectory": []
