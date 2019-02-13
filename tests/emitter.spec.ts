@@ -84,7 +84,7 @@ describe("emitter/simple cases", () => {
         emitter
             .on(c)
             .on(function(t) {
-                c = t;
+                c = t as any;
             });
 
         emitter.off(c);
@@ -129,5 +129,15 @@ describe("emitter/simple cases", () => {
 
         emitter.emit(42);
         emitter.emit(43);
+    });
+
+    it("should emit nothing", (done) => {
+        const emitter = new Emitter<void>();
+
+        emitter.on(() => {
+            done();
+        });
+
+        emitter.emit();
     });
 });

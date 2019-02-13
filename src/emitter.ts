@@ -3,7 +3,7 @@ import {Callback, InternalEmitterHandler} from "./types";
 export class Emitter<T = any> {
     private handlers: Array<InternalEmitterHandler<T>> = [];
 
-    public emit(object: T, ...args): this {
+    public emit(object?: T, ...args): this {
 
         this.handlers.forEach((h) => {
             h.cb.call(h.ctx, object, ...args);
