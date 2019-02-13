@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/the10kb/emitter#readme",
   "devDependencies": {
-    "@types/es6-shim": "^0.31.39",
     "@types/jest": "^22.1.3",
     "@types/node": "^9.4.5",
     "jest": "^22.3.0",

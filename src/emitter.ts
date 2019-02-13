@@ -15,12 +15,12 @@ export class Emitter<T = any> {
     }
 
     public on(cb: Callback<T>, ctx?: any): this {
-        this.handlers.push({ cb, ctx : ctx || window });
+        this.handlers.push({ cb, ctx : ctx || this });
         return this;
     }
 
     public once(cb: Callback<T>, ctx?: any): this {
-        this.handlers.push({ cb, ctx : ctx || window, once : true });
+        this.handlers.push({ cb, ctx : ctx || this, once : true });
         return this;
     }
 
